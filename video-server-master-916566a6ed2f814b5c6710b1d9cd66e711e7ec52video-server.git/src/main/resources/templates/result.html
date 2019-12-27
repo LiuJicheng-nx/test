@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>返回码:<span th:text="${return_code}"/></title>
+    <title>返回内容:<span th:text="${return_msg}"/></title>
+    <!--jq  js-->
+
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        button {
+            width: 100px;
+            height: 50px;
+            color: #333;
+            border: 1px solid #e3e3e3;
+            border-radius: 20px;
+            display: block;
+            margin: 60% auto;
+            margin-bottom: 0;
+            background: #eee;
+        }
+        span{
+            display: block;
+            margin:  auto;
+            text-align: center;
+            width: 80%;
+            padding-top: 50%;
+        }
+    </style>
+
+</head>
+<body>
+
+
+</br>
+
+<!--返回内容:-->
+<span th:text="${return_msg}"/>
+
+<div>
+
+    <button onclick="unfunction()">关闭本页面</button>
+</div>
+</body>
+<script type="text/javascript">
+
+    function unfunction() {
+        app.helle('helle,word')
+    }
+</script>
+</html>
