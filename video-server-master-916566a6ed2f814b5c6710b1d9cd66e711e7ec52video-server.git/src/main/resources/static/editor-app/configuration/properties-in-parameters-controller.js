@@ -40,7 +40,7 @@ var KisBpmInParametersPopupCtrl = ['$scope', '$q', '$translate', function($scope
         && $scope.property.value.inParameters !== undefined
         && $scope.property.value.inParameters !== null) {
         // Note that we clone the json object rather then setting it directly,
-        // this to cope with the fact that the tbUser can click the cancel button and no changes should have happened
+        // this to cope with the fact that the user can click the cancel button and no changes should have happened
         $scope.parameters = angular.copy($scope.property.value.inParameters);
     } else {
         $scope.parameters = [];

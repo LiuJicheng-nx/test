@@ -40,7 +40,7 @@ var KisBpmFormPropertiesPopupCtrl = ['$scope', '$q', '$translate', '$timeout', f
         && $scope.property.value.formProperties !== undefined
         && $scope.property.value.formProperties !== null) {
         // Note that we clone the json object rather then setting it directly,
-        // this to cope with the fact that the tbUser can click the cancel button and no changes should have happended
+        // this to cope with the fact that the user can click the cancel button and no changes should have happended
         $scope.formProperties = angular.copy($scope.property.value.formProperties);
 
         for (var i = 0; i < $scope.formProperties.length; i++) {

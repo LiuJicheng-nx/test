@@ -13,7 +13,7 @@ public class MenuDO implements Serializable {
 	private String name;
 	// 菜单URL
 	private String url;
-	// 授权(多个用逗号分隔，如：tbUser:list,tbUser:create)
+	// 授权(多个用逗号分隔，如：user:list,user:create)
 	private String perms;
 	// 类型 0：目录 1：菜单 2：按钮
 	private Integer type;
@@ -83,14 +83,14 @@ public class MenuDO implements Serializable {
 	}
 
 	/**
-	 * 设置：授权(多个用逗号分隔，如：tbUser:list,tbUser:create)
+	 * 设置：授权(多个用逗号分隔，如：user:list,user:create)
 	 */
 	public void setPerms(String perms) {
 		this.perms = perms;
 	}
 
 	/**
-	 * 获取：授权(多个用逗号分隔，如：tbUser:list,tbUser:create)
+	 * 获取：授权(多个用逗号分隔，如：user:list,user:create)
 	 */
 	public String getPerms() {
 		return perms;

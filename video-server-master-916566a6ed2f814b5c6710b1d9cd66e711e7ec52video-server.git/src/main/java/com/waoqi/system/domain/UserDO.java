@@ -221,7 +221,7 @@ public class UserDO implements Serializable {
 
     @Override
     public String toString() {
-        return "TbUserDO{" +
+        return "userDO{" +
                 "userId=" + userId +
                 ", username='" + username + '\'' +
                 ", name='" + name + '\'' +

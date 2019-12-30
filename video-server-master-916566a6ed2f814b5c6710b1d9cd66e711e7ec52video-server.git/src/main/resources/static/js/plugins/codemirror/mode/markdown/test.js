@@ -51,7 +51,7 @@
      "[link&formatting&formatting-link <][link http://example.com/][link&formatting&formatting-link >]");
 
   FT("formatting_linkEmail",
-     "[link&formatting&formatting-link <][link tbUser@example.com][link&formatting&formatting-link >]");
+     "[link&formatting&formatting-link <][link user@example.com][link&formatting&formatting-link >]");
 
   FT("formatting_escape",
      "[formatting-escape \\*]");
@@ -622,10 +622,10 @@
      "[link <http://example.com/>] foo [link <http://example.com/>]");
 
   MT("linkEmail",
-     "[link <tbUser@example.com>] foo");
+     "[link <user@example.com>] foo");
 
   MT("linkEmailDouble",
-     "[link <tbUser@example.com>] foo [link <tbUser@example.com>]");
+     "[link <user@example.com>] foo [link <user@example.com>]");
 
   MT("emAsterisk",
      "[em *foo*] bar");

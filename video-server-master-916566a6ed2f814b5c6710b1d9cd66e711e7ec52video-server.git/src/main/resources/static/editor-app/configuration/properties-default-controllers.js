@@ -37,7 +37,7 @@ var KisBpmStringPropertyCtrl = [ '$scope', function ($scope) {
     $scope.enterPressed = function(keyEvent) {
     	if (keyEvent && keyEvent.which === 13) {
     		keyEvent.preventDefault();
-	        $scope.inputBlurred(); // we want to do the same as if the tbUser would blur the input field
+	        $scope.inputBlurred(); // we want to do the same as if the user would blur the input field
     	}
     };
 

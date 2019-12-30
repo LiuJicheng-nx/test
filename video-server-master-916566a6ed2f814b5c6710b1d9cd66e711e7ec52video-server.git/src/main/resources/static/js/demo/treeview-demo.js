@@ -171,7 +171,7 @@ $(function () {
         color: "#428bca",
         expandIcon: "glyphicon glyphicon-stop",
         collapseIcon: "glyphicon glyphicon-unchecked",
-        nodeIcon: "glyphicon glyphicon-tbUser",
+        nodeIcon: "glyphicon glyphicon-user",
         showTags: true,
         data: defaultData
     });
@@ -185,7 +185,7 @@ $(function () {
     $('#treeview8').treeview({
         expandIcon: "glyphicon glyphicon-stop",
         collapseIcon: "glyphicon glyphicon-unchecked",
-        nodeIcon: "glyphicon glyphicon-tbUser",
+        nodeIcon: "glyphicon glyphicon-user",
         color: "yellow",
         backColor: "purple",
         onhoverColor: "orange",
@@ -201,7 +201,7 @@ $(function () {
     $('#treeview9').treeview({
         expandIcon: "glyphicon glyphicon-stop",
         collapseIcon: "glyphicon glyphicon-unchecked",
-        nodeIcon: "glyphicon glyphicon-tbUser",
+        nodeIcon: "glyphicon glyphicon-user",
         color: "yellow",
         backColor: "purple",
         onhoverColor: "orange",

@@ -264,7 +264,7 @@ var ProcessDiagramGenerator = {
 		};
 
 
-		// tbUser task
+		// user task
 		this.activityDrawInstructions["userTask"] = function(){
 			var activityImpl = this.activity;
 			var processDiagramCanvas = this.processDiagramCanvas;

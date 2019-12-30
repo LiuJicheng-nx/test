@@ -11,7 +11,7 @@
 
 var config = {
     msgurl: 'mailbox.html?msg=',
-    chatlogurl: 'mailbox.html?tbUser=',
+    chatlogurl: 'mailbox.html?user=',
     aniTime: 200,
     right: -232,
     api: {
@@ -337,7 +337,7 @@ xxim.popchatbox = function(othis){
         type: othis.attr('type'),
         name: othis.find('.xxim_onename').text(),  //用户名
         face: othis.find('.xxim_oneface').attr('src'),  //用户头像
-        href: 'profile.html?tbUser=' + dataId //用户主页
+        href: 'profile.html?user=' + dataId //用户主页
     }, key = param.type + dataId;
     if(!config.chating[key]){
         xxim.popchat(param);
@@ -592,7 +592,7 @@ xxim.view = (function(){
     var xximNode = xxim.layimNode = $('<div id="xximmm" class="xxim_main">'
             +'<div class="xxim_top" id="xxim_top">'
             +'  <div class="xxim_search"><i class="fa fa-search"></i><input id="xxim_searchkey" /><span id="xxim_closesearch">×</span></div>'
-            +'  <div class="xxim_tabs" id="xxim_tabs"><span class="xxim_tabfriend" title="好友"><i class="fa fa-tbUser"></i></span><span class="xxim_tabgroup" title="群组"><i class="fa fa-users"></i></span><span class="xxim_latechat"  title="最近聊天"><i class="fa fa-clock-o"></i></span></div>'
+            +'  <div class="xxim_tabs" id="xxim_tabs"><span class="xxim_tabfriend" title="好友"><i class="fa fa-user"></i></span><span class="xxim_tabgroup" title="群组"><i class="fa fa-users"></i></span><span class="xxim_latechat"  title="最近聊天"><i class="fa fa-clock-o"></i></span></div>'
             +'  <ul class="xxim_list" style="display:block"></ul>'
             +'  <ul class="xxim_list"></ul>'
             +'  <ul class="xxim_list"></ul>'

@@ -40,7 +40,7 @@ var KisBpmFieldsPopupCtrl = [ '$scope', '$q', '$translate', function($scope, $q,
         && $scope.property.value.fields !== undefined
         && $scope.property.value.fields !== null) {
         // Note that we clone the json object rather then setting it directly,
-        // this to cope with the fact that the tbUser can click the cancel button and no changes should have happened
+        // this to cope with the fact that the user can click the cancel button and no changes should have happened
         $scope.fields = angular.copy($scope.property.value.fields);
 
         for (var i = 0; i < $scope.fields.length; i++)

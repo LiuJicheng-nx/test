@@ -1705,7 +1705,7 @@ jQuery.extend({
 		privateCache = thisCache = cache[ id ];
 
 		// jQuery data() is stored in a separate object inside the object's internal data
-		// cache in order to avoid key collisions between internal data and tbUser-defined
+		// cache in order to avoid key collisions between internal data and user-defined
 		// data.
 		if ( !pvt ) {
 			if ( !thisCache.data ) {
@@ -3557,7 +3557,7 @@ if ( !jQuery.support.submitBubbles ) {
 					form = jQuery.nodeName( elem, "input" ) || jQuery.nodeName( elem, "button" ) ? elem.form : undefined;
 				if ( form && !form._submit_attached ) {
 					jQuery.event.add( form, "submit._submit", function( event ) {
-						// If form was submitted by the tbUser, bubble the event up the tree
+						// If form was submitted by the user, bubble the event up the tree
 						if ( this.parentNode && !event.isTrigger ) {
 							jQuery.event.simulate( "submit", this.parentNode, event, true );
 						}

@@ -194,7 +194,7 @@
     '{',
     '  [property "@fake"]: [string "@fake"],',
     '  [property "@contextual"]: [string "@identifier"],',
-    '  [property "tbUser@domain.com"]: [string "@graphical"],',
+    '  [property "user@domain.com"]: [string "@graphical"],',
     '  [property "@ID"]: [string "@@ID"]',
     '}');
 })();

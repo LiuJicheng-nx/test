@@ -181,6 +181,7 @@ public class UserController extends BaseController {
 		}
 
 	}
+
 	@RequiresPermissions("sys:user:resetPwd")
 	@Log("admin提交更改用户密码")
 	@PostMapping("/adminResetPwd")
@@ -197,6 +198,7 @@ public class UserController extends BaseController {
 		}
 
 	}
+
 	@GetMapping("/tree")
 	@ResponseBody
 	public Tree<DeptDO> tree() {

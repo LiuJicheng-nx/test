@@ -17096,7 +17096,7 @@ ORYX.Plugins.AbstractPlugin = Clazz.extend({
         //Edges cannot be moved anymore
         this.facade.disableEvent(ORYX.CONFIG.EVENT_MOUSEDOWN);
 
-        // Stop the tbUser from editing the diagram while the plugin is active
+        // Stop the user from editing the diagram while the plugin is active
         this._stopSelectionChange = function(){
             if(this.facade.getSelection().length > 0) {
                 this.facade.setSelection([]);
@@ -18276,7 +18276,7 @@ if (!ORYX.Plugins) {
 
 /**
  * This plugin is responsible for displaying loading indicators and to prevent
- * the tbUser from accidently unloading the page by, e.g., pressing the backspace
+ * the user from accidently unloading the page by, e.g., pressing the backspace
  * button and returning to the previous site in history.
  * @param {Object} facade The editor plugin facade to register enhancements with.
  */

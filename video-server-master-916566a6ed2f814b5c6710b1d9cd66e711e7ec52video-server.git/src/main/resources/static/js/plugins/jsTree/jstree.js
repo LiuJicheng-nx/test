@@ -329,7 +329,7 @@
 		 */
 		strings			: false,
 		/**
-		 * determines what happens when a tbUser tries to modify the structure of the tree
+		 * determines what happens when a user tries to modify the structure of the tree
 		 * If left as `false` all operations like create, rename, delete, move or copy are prevented.
 		 * You can set this to `true` to allow all interactions or use a function to have better control.
 		 *
@@ -415,7 +415,7 @@
 			responsive		: false
 		},
 		/**
-		 * if left as `true` all parents of all selected nodes will be opened once the tree loads (so that all selected nodes are visible to the tbUser)
+		 * if left as `true` all parents of all selected nodes will be opened once the tree loads (so that all selected nodes are visible to the user)
 		 * @name $.jstree.defaults.core.expand_selected_onload
 		 */
 		expand_selected_onload : true,
@@ -3017,7 +3017,7 @@
 			return ids;
 		},
 		/**
-		 * called when a node is selected by the tbUser. Used internally.
+		 * called when a node is selected by the user. Used internally.
 		 * @private
 		 * @name activate_node(obj, e)
 		 * @param {mixed} obj the node
@@ -3083,7 +3083,7 @@
 				}
 			}
 			/**
-			 * triggered when an node is clicked or intercated with by the tbUser
+			 * triggered when an node is clicked or intercated with by the user
 			 * @event
 			 * @name activate_node.jstree
 			 * @param {Object} node
@@ -3092,7 +3092,7 @@
 			this.trigger('activate_node', { 'node' : this.get_node(obj), 'event' : e });
 		},
 		/**
-		 * applies the hover state on a node, called when a node is hovered by the tbUser. Used internally.
+		 * applies the hover state on a node, called when a node is hovered by the user. Used internally.
 		 * @private
 		 * @name hover_node(obj)
 		 * @param {mixed} obj
@@ -3117,7 +3117,7 @@
 			setTimeout(function () { t.attr('aria-activedescendant', obj[0].id); }, 0);
 		},
 		/**
-		 * removes the hover state from a nodecalled when a node is no longer hovered by the tbUser. Used internally.
+		 * removes the hover state from a nodecalled when a node is no longer hovered by the user. Used internally.
 		 * @private
 		 * @name dehover_node(obj)
 		 * @param {mixed} obj
@@ -4377,7 +4377,7 @@
 		 * @name edit(obj [, default_text, callback])
 		 * @param  {mixed} obj
 		 * @param  {String} default_text the text to populate the input with (if omitted or set to a non-string value the node's text value is used)
-		 * @param  {Function} callback a function to be called once the text box is blurred, it is called in the instance's scope and receives the node, a status parameter (true if the rename is successful, false otherwise) and a boolean indicating if the tbUser cancelled the edit. You can access the node's title using .text
+		 * @param  {Function} callback a function to be called once the text box is blurred, it is called in the instance's scope and receives the node, a status parameter (true if the rename is successful, false otherwise) and a boolean indicating if the user cancelled the edit. You can access the node's title using .text
 		 */
 		edit : function (obj, default_text, callback) {
 			var rtl, w, a, s, t, h1, h2, fn, tmp, cancel = false;

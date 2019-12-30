@@ -80,7 +80,7 @@ function shallowClearAndCopy(src, dst) {
  * Requires the {@link ngResource `ngResource`} module to be installed.
  *
  * @param {string} url A parametrized URL template with parameters prefixed by `:` as in
- *   `/tbUser/:username`. If you are using a URL with a port number (e.g.
+ *   `/user/:username`. If you are using a URL with a port number (e.g.
  *   `http://example.com:8080/api`), it will be respected.
  *
  *   If you are using a url with a suffix, just add the suffix, like this:
@@ -162,10 +162,10 @@ function shallowClearAndCopy(src, dst) {
  *   as  methods with the `$` prefix. This allows you to easily perform CRUD operations (create,
  *   read, update, delete) on server-side data like this:
  *   <pre>
-        var User = $resource('/tbUser/:userId', {userId:'@id'});
-        var tbUser = User.get({userId:123}, function() {
-          tbUser.abc = true;
-          tbUser.$save();
+        var User = $resource('/user/:userId', {userId:'@id'});
+        var user = User.get({userId:123}, function() {
+          user.abc = true;
+          user.$save();
         });
      </pre>
  *
@@ -213,14 +213,14 @@ function shallowClearAndCopy(src, dst) {
  *
  * <pre>
      // Define CreditCard class
-     var CreditCard = $resource('/tbUser/:userId/card/:cardId',
+     var CreditCard = $resource('/user/:userId/card/:cardId',
       {userId:123, cardId:'@id'}, {
        charge: {method:'POST', params:{charge:true}}
       });
 
      // We can retrieve a collection from the server
      var cards = CreditCard.query(function() {
-       // GET: /tbUser/123/card
+       // GET: /user/123/card
        // server returns: [ {id:456, number:'1234', name:'Smith'} ];
 
        var card = cards[0];
@@ -229,19 +229,19 @@ function shallowClearAndCopy(src, dst) {
        card.name = "J. Smith";
        // non GET methods are mapped onto the instances
        card.$save();
-       // POST: /tbUser/123/card/456 {id:456, number:'1234', name:'J. Smith'}
+       // POST: /user/123/card/456 {id:456, number:'1234', name:'J. Smith'}
        // server returns: {id:456, number:'1234', name: 'J. Smith'};
 
        // our custom method is mapped as well.
        card.$charge({amount:9.99});
-       // POST: /tbUser/123/card/456?amount=9.99&charge=true {id:456, number:'1234', name:'J. Smith'}
+       // POST: /user/123/card/456?amount=9.99&charge=true {id:456, number:'1234', name:'J. Smith'}
      });
 
      // we can create an instance as well
      var newCard = new CreditCard({number:'0123'});
      newCard.name = "Mike Smith";
      newCard.$save();
-     // POST: /tbUser/123/card {number:'0123', name:'Mike Smith'}
+     // POST: /user/123/card {number:'0123', name:'Mike Smith'}
      // server returns: {id:789, number:'0123', name: 'Mike Smith'};
      expect(newCard.id).toEqual(789);
  * </pre>
@@ -256,10 +256,10 @@ function shallowClearAndCopy(src, dst) {
  * operations (create, read, update, delete) on server-side data.
 
    <pre>
-     var User = $resource('/tbUser/:userId', {userId:'@id'});
-     var tbUser = User.get({userId:123}, function() {
-       tbUser.abc = true;
-       tbUser.$save();
+     var User = $resource('/user/:userId', {userId:'@id'});
+     var user = User.get({userId:123}, function() {
+       user.abc = true;
+       user.$save();
      });
    </pre>
  *
@@ -268,11 +268,11 @@ function shallowClearAndCopy(src, dst) {
  * could rewrite the above example and get access to http headers as:
  *
    <pre>
-     var User = $resource('/tbUser/:userId', {userId:'@id'});
+     var User = $resource('/user/:userId', {userId:'@id'});
      User.get({userId:123}, function(u, getResponseHeaders){
        u.abc = true;
        u.$save(function(u, putResponseHeaders) {
-         //u => saved tbUser object
+         //u => saved user object
          //putResponseHeaders => $http header getter
        });
      });

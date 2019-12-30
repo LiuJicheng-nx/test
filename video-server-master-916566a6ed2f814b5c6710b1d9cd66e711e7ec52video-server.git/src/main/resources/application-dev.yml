@@ -19,9 +19,9 @@ spring:
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource
     driverClassName: com.mysql.jdbc.Driver
-    url: jdbc:mysql://39.105.156.201:3306/snail_demo?useSSL=false&useUnicode=yes&characterEncoding=UTF8
+    url: jdbc:mysql://localhost/snail_demo?useSSL=false&useUnicode=yes&characterEncoding=UTF8
     username:  root
-    password:  snail-retail
+    password:  root
     initialSize: 1
     minIdle: 3
     maxActive: 20

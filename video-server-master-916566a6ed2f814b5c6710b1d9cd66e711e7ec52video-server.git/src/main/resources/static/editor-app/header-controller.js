@@ -26,6 +26,6 @@ angular.module('activitiModeler')
 
     	// TODO: generate setting-menu items
 
-    	// TODO: generate tbUser-menu items
+    	// TODO: generate user-menu items
 
 }]);

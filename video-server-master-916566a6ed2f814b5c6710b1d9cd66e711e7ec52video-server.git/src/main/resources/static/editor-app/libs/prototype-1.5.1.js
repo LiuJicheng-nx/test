@@ -1080,7 +1080,7 @@ Ajax.Request.prototype = Object.extend(new Ajax.Base(), {
             headers['Connection'] = 'close';
     }
 
-    // tbUser-defined headers
+    // user-defined headers
     if (typeof this.options.requestHeaders == 'object') {
       var extras = this.options.requestHeaders;
 

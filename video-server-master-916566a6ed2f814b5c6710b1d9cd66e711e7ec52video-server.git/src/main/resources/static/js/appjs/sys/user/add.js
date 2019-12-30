@@ -23,7 +23,7 @@ function save() {
 	$.ajax({
 		cache : true,
 		type : "POST",
-		url : "/sys/tbUser/save",
+		url : "/sys/user/save",
 		data : $('#signupForm').serialize(),// 你的formid
 		async : false,
 		error : function(request) {
@@ -55,7 +55,7 @@ function validateRule() {
 				required : true,
 				minlength : 2,
 				remote : {
-					url : "/sys/tbUser/exit", // 后台处理程序
+					url : "/sys/user/exit", // 后台处理程序
 					type : "post", // 数据发送方式
 					dataType : "json", // 接受数据格式
 					data : { // 要传递的数据

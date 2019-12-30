@@ -78,7 +78,7 @@ var EXPANDED_SUBPROCESS_CORNER_ROUND = 10;
 // icons
 var ICON_SIZE = 16;
 var ICON_PADDING = 4;
-var USERTASK_IMAGE = 		"images/deployer/tbUser.png";
+var USERTASK_IMAGE = 		"images/deployer/user.png";
 var SCRIPTTASK_IMAGE = 		"images/deployer/script.png";
 var SERVICETASK_IMAGE = 	"images/deployer/service.png";
 var RECEIVETASK_IMAGE = 	"images/deployer/receive.png";

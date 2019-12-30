@@ -50,7 +50,7 @@ public class UserServiceImpl implements UserService {
     private static final Logger logger = LoggerFactory.getLogger(UserService.class);
 
     @Override
-//    @Cacheable(value = "tbUser",key = "#id")
+//    @Cacheable(value = "user",key = "#id")
     public UserDO get(Long id) {
         List<Long> roleIds = userRoleMapper.listRoleId(id);
         UserDO user = userMapper.get(id);
@@ -116,7 +116,7 @@ public class UserServiceImpl implements UserService {
         return r;
     }
 
-    //    @CacheEvict(value = "tbUser")
+    //    @CacheEvict(value = "user")
     @Override
     public int remove(Long userId) {
         userRoleMapper.removeByUserId(userId);
@@ -198,7 +198,7 @@ public class UserServiceImpl implements UserService {
             tree.setText(user.getName());
             Map<String, Object> state = new HashMap<>(16);
             state.put("opened", true);
-            state.put("mType", "tbUser");
+            state.put("mType", "user");
             tree.setState(state);
             trees.add(tree);
         }

@@ -1790,7 +1790,7 @@
             // Fullscreen
             _on(player.buttons.fullscreen, 'click', _toggleFullscreen);
 
-            // Handle tbUser exiting fullscreen by escaping etc
+            // Handle user exiting fullscreen by escaping etc
             if (fullscreen.supportsFullScreen) {
                 _on(document, fullscreen.fullScreenEventName, _toggleFullscreen);
             }
@@ -2047,7 +2047,7 @@
 
     // Expose setup function
     api.setup = function (options) {
-        // Extend the default options with tbUser specified
+        // Extend the default options with user specified
         config = _extend(defaults, options);
 
         // Bail if disabled or no basic support

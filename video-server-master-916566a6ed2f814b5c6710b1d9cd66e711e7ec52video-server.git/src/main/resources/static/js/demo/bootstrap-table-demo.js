@@ -132,7 +132,7 @@ function buildTable($el, cells, rows) {
   // -------------------------------
   (function() {
     $('#exampleTableColumns').bootstrapTable({
-      url: "/sys/tbUser/list",
+      url: "/sys/user/list",
       height: "400",
       iconSize: 'outline',
       showColumns: true,
